@@ -1,0 +1,654 @@
+
+    /* ================= RESET ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #222;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ================= BREADCRUMB ================= */
+    .breadcrumb-section {
+      background: #f5f5f5;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    .breadcrumb-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 18px 40px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    .breadcrumb a {
+      color: #0b2c52;
+      font-weight: 500;
+    }
+
+    .separator {
+      margin: 0 10px;
+      color: #6c757d;
+    }
+
+    .current {
+      color: #9aa0a6;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+    main {
+      padding: 60px 0;
+    }
+
+    .blog-section .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 0 40px;
+      display: flex;
+      gap: 30px;
+    }
+
+    .main-content {
+      flex: 3;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .main-content h1 span {
+      background: linear-gradient(90deg, #E0004D 0%, #6A00FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .main-img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: fit-content;
+      margin: 40px auto;
+      padding: 12px 32px;
+      background: linear-gradient(90deg, #E0004D 0%, #6A00FF 100%);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(106, 0, 255, 0.2);
+    }
+
+    .main-content p {
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .main-content p .headline {
+      color: rgb(167, 31, 240);
+    }
+
+    .quote-box {
+      background: #eef4fb;
+      padding: 20px;
+      border-left: 5px solid #0078d4;
+      margin: 20px 0;
+      line-height: 20px;
+    }
+
+    .main-content h2 {
+      margin: 25px 0 10px;
+      font-size: 24px;
+    }
+
+    /* ================= SIDEBAR ================= */
+    .sidebar {
+      flex: 1;
+    }
+
+    .side-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+
+    .side-box h3 {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .side-box ul {
+      padding-left: 20px;
+    }
+
+    .side-box ul li {
+      list-style: disc;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .post {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #555;
+      padding: 5px 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #e7eef7;
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    .consult-box {
+      background: linear-gradient(90deg, #E0004D 0%, #6A00FF 100%);
+      padding: 25px;
+      border-radius: 6px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .consult-box a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #fff;
+      color: #0078d4;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .consult-box a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    /* ================= MOBILE MENU ================= */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #241A2C, #2c1f3a);
+      padding: 20px;
+      z-index: 999;
+      border-top: 1px solid #b88cff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .mobile-nav a {
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #b88cff;
+      padding-left: 10px;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-get-started {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 26px;
+      border: 1.5px solid #fff;
+      border-radius: 14px;
+      color: #fff;
+      transition: 0.3s;
+      white-space: nowrap;
+      margin-top: 15px;
+      justify-content: center;
+      background: transparent;
+    }
+
+    .mobile-get-started:hover {
+      background: #fff;
+      color: #7a00ff;
+    }
+
+    /* ================= RESPONSIVE DESIGN ================= */
+
+    /* Tablet (768px - 991px) */
+    @media (max-width: 991px) {
+      .header-container {
+        padding: 0 20px;
+      }
+
+      .header-center {
+        display: none;
+      }
+
+      .burger-wrap {
+        display: flex;
+      }
+
+      .header-wrapper {
+        height: 70px;
+      }
+
+      .logo {
+        width: 150px;
+      }
+
+      .head-button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      .mobile-menu {
+        top: 70px;
+      }
+
+      .breadcrumb-container {
+        padding: 15px 20px;
+      }
+
+      .breadcrumb {
+        font-size: 14px;
+      }
+
+      .blog-section .container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 20px;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+
+      .main-img {
+        height: 350px;
+      }
+
+      .btn {
+        margin: 30px auto;
+        padding: 10px 25px;
+        font-size: 15px;
+      }
+    }
+
+    /* Mobile (576px - 767px) */
+    @media (max-width: 767px) {
+      .header-wrapper {
+        height: 60px;
+      }
+
+      .logo {
+        width: 120px;
+      }
+
+      /* KEEP THE GET STARTED BUTTON VISIBLE */
+      .head-button {
+        padding: 8px 15px;
+        font-size: 13px;
+        display: inline-flex !important;
+      }
+
+      .burger-wrap {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+      }
+
+      .mobile-menu {
+        top: 60px;
+        padding: 15px;
+      }
+
+      .breadcrumb {
+        font-size: 13px;
+      }
+
+      .separator {
+        margin: 0 5px;
+      }
+
+      main {
+        padding: 40px 0;
+      }
+
+      .main-content h1 {
+        font-size: 24px;
+      }
+
+      .main-img {
+        height: 250px;
+      }
+
+      .main-content p {
+        font-size: 15px;
+      }
+
+      .quote-box {
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      .main-content h2 {
+        font-size: 20px;
+      }
+
+      .side-box {
+        padding: 15px;
+      }
+
+      .side-box h3 {
+        font-size: 16px;
+      }
+
+      .consult-box {
+        padding: 20px;
+      }
+
+      .consult-box h3 {
+        font-size: 16px;
+      }
+    }
+
+      /* Breadcrumb */
+      @media (max-width: 576px) {
+
+        .header-container,
+        .breadcrumb-container,
+        .blog-section .container {
+          padding: 0 15px;
+        }
+
+        .header-wrapper {
+          height: 55px;
+        }
+
+        .logo {
+          width: 100px;
+        }
+
+        /* KEEP GET STARTED BUTTON VISIBLE */
+        .head-button {
+          padding: 6px 12px;
+          font-size: 12px;
+          display: inline-flex !important;
+        }
+
+        .burger-wrap {
+          font-size: 18px;
+        }
+
+        .mobile-menu {
+          top: 55px;
+        }
+
+        .breadcrumb {
+          font-size: 12px;
+        }
+
+        .main-content {
+          padding: 15px;
+        }
+
+        .main-content h1 {
+          font-size: 20px;
+        }
+
+        .subtitle {
+          font-size: 13px;
+        }
+
+        .main-img {
+          height: 200px;
+          margin-bottom: 15px;
+        }
+
+        .btn {
+          margin: 20px auto;
+          padding: 10px 20px;
+          font-size: 14px;
+          width: 100%;
+          max-width: 200px;
+        }
+
+        .main-content p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        .quote-box {
+          font-size: 13px;
+          padding: 12px;
+        }
+
+        .main-content h2 {
+          font-size: 18px;
+          margin: 20px 0 8px;
+        }
+
+        .tags span {
+          padding: 4px 8px;
+          font-size: 11px;
+        }
+
+        .consult-box {
+          padding: 15px;
+        }
+
+        .consult-box h3 {
+          font-size: 15px;
+        }
+
+        .consult-box a {
+          padding: 8px 15px;
+          font-size: 14px;
+        }
+      }
+
+      /* Extra Small Mobile (Below 400px) */
+      @media (max-width: 400px) {
+        .header-wrapper {
+          height: 50px;
+        }
+
+        .logo {
+          width: 90px;
+        }
+
+        /* KEEP GET STARTED BUTTON VISIBLE */
+        .head-button {
+          padding: 5px 10px;
+          font-size: 11px;
+          display: inline-flex !important;
+        }
+
+        .burger-wrap {
+          font-size: 16px;
+        }
+
+        .mobile-menu {
+          top: 50px;
+        }
+
+        .breadcrumb {
+          font-size: 11px;
+        }
+
+        .main-img {
+          height: 180px;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+
+        .header,
+        .breadcrumb-section,
+        .sidebar,
+        .btn {
+          display: none;
+        }
+
+        .main-content {
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+    /* ===== FLOATING BUTTONS (WHATSAPP & SCROLL-TO-TOP) ===== */
+    .whatsapp,
+    .scroll-to-top {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      z-index: 100;
+      right: 30px;
+    }
+
+    .whatsapp {
+      bottom: 30px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .scroll-to-top {
+      bottom: 100px;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+    }
+
+    .scroll-to-top:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-icon,
+    .scroll-to-top-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @media(max-width:600px) {
+      .whatsapp,
+      .scroll-to-top {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+      }
+
+      .whatsapp-icon,
+      .scroll-to-top-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .whatsapp {
+        bottom: 20px;
+      }
+
+      .scroll-to-top {
+        bottom: 80px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .whatsapp,
+      .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+      }
+
+      .whatsapp-icon,
+      .scroll-to-top-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .whatsapp {
+        bottom: 15px;
+      }
+
+      .scroll-to-top {
+        bottom: 70px;
+      }
+    }

@@ -1,0 +1,459 @@
+    .hide {
+      display: none !important;
+    }
+
+    .btn.btn-secondary:hover {
+      background: linear-gradient(to right, white, white),
+        linear-gradient(to right,
+          var(--_style---red),
+          var(--_style---deep-purple));
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+    }
+
+    .btn.btn-secondary:hover span {
+      background-image: linear-gradient(90deg,
+          var(--_style---red),
+          var(--_style---deep-purple));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .w-richtext-figure-type-image img {
+      border-radius: 20px;
+    }
+
+    .loy-news-promo-list.w-row:before,
+    .loy-news-promo-list.w-row:after,
+    .loy-podcast-promo-list.w-row:before,
+    .loy-podcast-promo-list.w-row:after {
+      display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+
+      .w-container .w-row.loy-news-promo-list,
+      .w-container .w-row.loy-podcast-promo-list {
+        margin-left: -16px;
+        margin-right: -16px;
+      }
+    }
+
+    /* Inita end */
+    /* Up-scroll */
+    .scroll-to-top {
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .scroll-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mission Vision Section Responsive Styles */
+    .mission-vision-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .mission-vision-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .mission-card,
+    .vision-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .mission-header,
+    .vision-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .mission-icon,
+    .vision-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mission-header h3,
+    .vision-header h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #7c3aed;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .mission-content p,
+    .vision-content p {
+      color: #4b5563;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .why-matters {
+      background: #f3f4f6;
+      border-left: 4px solid #7c3aed;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .why-matters h4 {
+      color: #7c3aed;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .why-matters p {
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Tablet Styles */
+    @media screen and (max-width: 992px) {
+      .mission-vision-section {
+        padding: 60px 20px;
+      }
+
+      .mission-vision-wrapper {
+        gap: 30px;
+      }
+
+      .mission-card,
+      .vision-card {
+        padding: 35px;
+      }
+
+      .mission-header h3,
+      .vision-header h3 {
+        font-size: 22px;
+      }
+
+      .mission-content p,
+      .vision-content p {
+        font-size: 14px;
+      }
+    }
+
+    /* Mobile Landscape and Small Tablets */
+    @media screen and (max-width: 768px) {
+      .mission-vision-section {
+        padding: 50px 15px;
+      }
+
+      .mission-vision-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .mission-card,
+      .vision-card {
+        padding: 30px;
+      }
+
+      .mission-header h3,
+      .vision-header h3 {
+        font-size: 20px;
+      }
+
+      .mission-icon,
+      .vision-icon {
+        width: 45px;
+        height: 45px;
+      }
+
+      .mission-icon svg,
+      .vision-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .why-matters {
+        padding: 18px;
+      }
+    }
+
+    /* Mobile Styles */
+    @media screen and (max-width: 576px) {
+      .mission-vision-section {
+        padding: 40px 15px;
+      }
+
+      .mission-vision-wrapper {
+        gap: 20px;
+      }
+
+      .mission-card,
+      .vision-card {
+        padding: 25px;
+        border-radius: 12px;
+      }
+
+      .mission-header,
+      .vision-header {
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .mission-header h3,
+      .vision-header h3 {
+        font-size: 18px;
+        letter-spacing: 0.3px;
+      }
+
+      .mission-icon,
+      .vision-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+      }
+
+      .mission-icon svg,
+      .vision-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .mission-content p,
+      .vision-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+      }
+
+      .why-matters {
+        padding: 16px;
+        margin-top: 25px;
+      }
+
+      .why-matters h4 {
+        font-size: 15px;
+      }
+
+      .why-matters p {
+        font-size: 13px;
+      }
+    }
+
+    /* Extra Small Mobile */
+    @media screen and (max-width: 400px) {
+      .mission-vision-section {
+        padding: 35px 10px;
+      }
+
+      .mission-card,
+      .vision-card {
+        padding: 20px;
+      }
+
+      .mission-header h3,
+      .vision-header h3 {
+        font-size: 16px;
+      }
+
+      .mission-content p,
+      .vision-content p {
+        font-size: 13px;
+      }
+
+      .why-matters h4 {
+        font-size: 14px;
+      }
+
+      .why-matters p {
+        font-size: 12px;
+      }
+    }
+
+
+    @media screen and (max-width: 991px) {
+      ::-webkit-scrollbar {
+        width: 0px;
+        display: none !important;
+      }
+
+      html,
+      body {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+    }
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-text p {
+  color: var(--gray);
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: justify;
+  hyphens: auto;
+  word-spacing: -0.05em;
+}
+
+.about-image {
+  flex: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transform: perspective(1000px) rotateY(-15deg);
+  transition: var(--transition);
+}
+
+.about-image:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .about-image {
+    transform: none;
+  }
+
+  .about-image:hover {
+    transform: translateY(-10px);
+  }
+}
+
+    /* ===== FLOATING BUTTONS (WHATSAPP & SCROLL-TO-TOP) ===== */
+    .whatsapp,
+    .scroll-to-top {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      z-index: 100;
+      right: 30px;
+    }
+
+    .whatsapp {
+      bottom: 30px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .scroll-to-top {
+      bottom: 100px;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+    }
+
+    .scroll-to-top:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-icon,
+    .scroll-to-top-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @media(max-width:600px) {
+      .whatsapp,
+      .scroll-to-top {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+      }
+
+      .whatsapp-icon,
+      .scroll-to-top-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .whatsapp {
+        bottom: 20px;
+      }
+
+      .scroll-to-top {
+        bottom: 80px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .whatsapp,
+      .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+      }
+
+      .whatsapp-icon,
+      .scroll-to-top-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .whatsapp {
+        bottom: 15px;
+      }
+
+      .scroll-to-top {
+        bottom: 70px;
+      }
+    }
